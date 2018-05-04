@@ -13,11 +13,12 @@ $(document).ready(function(){
     storageBucket: "project-1-f9351.appspot.com",
     messagingSenderId: "197704962174"
   };
-
-
   firebase.initializeApp(config);
 
+  
+
   var database = firebase.database();
+
   var trainName = "";
   var destination ="";
   var firstTime = "";
@@ -32,6 +33,60 @@ $(document).ready(function(){
     frequency =$("#frequency").val().trim();
 
 console.log(trainName);
+console.log(destination);
+console.log(firstTime);
+console.log(frequency);
+
+// //store info to firebase when submit
+
+//clear the values
+  var newTrain = {
+
+    name: trainName,
+    place: destination,
+    firstTrain: firstTime,
+    occurance: frequency,
+
+  }
+
+  database.ref().push(newTrain);
+
+  $("#train_name").val("");
+
+  $("#frequency").val("");
+
+  $("#destination_name").val("");
+
+  $("#first_train").val("");
+
+
+  database.ref().on("child_added", function(childSnapshot, prevChildKey) {
+
+    console.log(childSnapshot.val());
+
+    var name1 = childSnapshot.val().name;
+    var place1 = childSnapshot.val().place;
+    var freq = childSnapshot.val().occurance;
+
+
+    console.log(name1);
+    console.log(place1);
+    console.log(freq);
+   
+
+
+    $(".scheduleDisplay").append("<tr><td>" + name1 + "</td><td>"  + place1 + "</td><td>"  + freq + "</td></tr>" )
+
+
+
+  })
+
+// // update html
+
+
+
+
+
 
   });
 
