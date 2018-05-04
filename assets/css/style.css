@@ -1,0 +1,47 @@
+.parallax-container {
+ 
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    height: 500px;
+  }
+
+  .nav-wrapper{
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding-left: 250px;
+ 
+      }
+
+#cont1{
+    height: 150px;
+}
+
+ #cont2, #cont3{
+        height: 100px;
+    }
+
+    table.highlight tbody tr:hover {
+        background-color: #eee !important;
+    }
+
+
+.footer-copyright{
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    height:50px;
+    padding-top:20px;
+    
+}
+
+
+/* label focus color */
+.input-field input:focus + label {
+    color: #12206b !important;
+  }
+  /* label underline focus color */
+  .row .input-field input:focus {
+    border-bottom: 1px solid #12206b !important;
+    box-shadow: 0 1px 0 0  #12206b !important
+  }
+ 
+
+  button{
+     margin-left:10px;
+  }

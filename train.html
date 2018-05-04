@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Schedule | Erika Matsumoto</title>
+
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Link to Moment.js  -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+
+
+<body>
+    <!-- entire container div -->
+
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo red-text text-darken-1 ">
+                <i class="material-icons"> timer</i>
+                Train Schedule</a>
+
+        </div>
+    </nav>
+    <!-- top container -->
+    <div class="parallax-container" id="cont1">
+        <!-- <div class="parallax"><img src="assets/images/railway.jpeg"></div> -->
+    </div>
+
+
+    <div class="section white">
+        <div class="row container">
+            <h1 class="header">Anytime is Train Time!</h1>
+            <p class="grey-text text-darken-3 lighten-3">Choo Choo. Chee Chee.</p>
+        </div>
+    </div>
+    <br>
+
+    <div class="parallax-container" id="cont2">
+        <!-- <div class="parallax"><img src="assets/images/speedTrain.png"></div> -->
+    </div>
+    <!-- Schedule Table -->
+    <div class="section white">
+        <div class="row container">
+            <h3 class="header">Current Train Schedule!</h3>
+
+            <table class="bordered highlight striped responsive z-depth-2 collapsible" data-collapsible="expandable">
+                <thead>
+                    <tr>
+                        <th>Train Name</th>
+                        <th>Destination</th>
+                        <th>Frequency (min)</th>
+                        <th>Next Arrival</th>
+                        <th>Minutes Away</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                    </tr>
+                    <tr>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                    </tr>
+                    <tr>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+<br>
+
+    <!-- Form Input -->
+    <div class="container ">
+        <div class="row ">
+            <h4 class="header"> Add Train!</h4>
+            <form class="col s12 z-depth-2">
+                <div class="row">
+
+                    <div class="input-field col s12">
+                        <input id="train_name" type="text" class="validate">
+                        <label for="train_name">Train Name</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <input id="destination_name" type="text" class="validate">
+                        <label for="destination_name">Destination</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <input id="first_train" type="text" class="validate" >
+                        <label for="first_train">First Train Time (hh:mm - military time)  </label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <input id="frequency" type="text" class="validate">
+                        <label for="frequency">Frequency (mins)</label>
+                    </div>
+
+                    <button class="btn waves-effect waves-light" type="submit" name="action" id="addTrain">Submit
+                            <i class="material-icons right">send</i>
+                          </button>
+                                
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Bottom Container -->
+    <div class="parallax-container" id="cont3">
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-copyright red-text text-darken-1 text-left">
+        <div class="container">
+            © 2018 Copyright
+            <a class="red-text text-darken-1  right" href="#!">More Links</a>
+        </div>
+    </div>
+
+
+
+
+    <!-- closing scripts -->
+
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+
+    <script type="text/javascript" src="assets/javascript/schedule.js"></script>
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+
+
+</body>
+
+</html>
