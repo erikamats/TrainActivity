@@ -72,18 +72,28 @@ console.log(frequency);
     console.log(name1);
     console.log(place1);
     console.log(freq);
-   
 
+    var times = (timeDiff / freq);
+    var rounds = parseInt(times);
+
+    var timeDiff = moment(firstTime,"mm").fromNow(true);
+
+    console.log(timeDiff);
+
+    var nextArrive = moment().subtract(timeDiff);
+    console.log(nextArrive);
+    
+    // var minsAway =  (Math.ceil(rounds)*freq) - timeDiff;
+    
+    // console.log(minsAway);
+ 
+    // console.log(minsAway);
+   
+// // update html
 
     $(".scheduleDisplay").append("<tr><td>" + name1 + "</td><td>"  + place1 + "</td><td>"  + freq + "</td></tr>" )
 
-
-
-  })
-
-// // update html
-
-
+  });
 
 
 
