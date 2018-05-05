@@ -67,36 +67,51 @@ console.log(frequency);
     var name1 = childSnapshot.val().name;
     var place1 = childSnapshot.val().place;
     var freq = childSnapshot.val().occurance;
-
+  
 
     console.log(name1);
     console.log(place1);
     console.log(freq);
 
-    var times = (timeDiff / freq);
-    var rounds = parseInt(times);
 
-    var timeDiff = moment(firstTime,"mm").fromNow(true);
+    // difference - first arrival til now in mins
+    var timeConv = moment(firstTime,"hh:mm");
 
-    console.log(timeDiff);
+    // moment(firstTime,"hh:mm").fromNow(true);
 
-    var nextArrive = moment().subtract(timeDiff);
-    console.log(nextArrive);
+    console.log("time difference "  + timeConv)
+
+    var now = moment();
+    console.log("Current time " + now);
+
+    var timeDiff = moment().diff(moment(timeConv), "minutes");
+    console.log("difference in time: " + timeDiff);
     
-    // var minsAway =  (Math.ceil(rounds)*freq) - timeDiff;
     
-    // console.log(minsAway);
- 
-    // console.log(minsAway);
+    // how much time has past since last arrival (mod)
+    var timePast = (timeDiff % freq);
+    console.log( "minutes past since last train: " + timePast);
+  
+
+    var minsAway = freq - timePast;
+
+    console.log("minutes from arriving:" + minsAway);
+
+    //next arrival (time)
+
+    var nextChoo = moment().add(minsAway, "minutes");
+
+    console.log("next arrival: " + moment(nextChoo).format("hh:mm"));
+
+    var nextArrival = moment(nextChoo).format("hh:mm");
+
+    
    
 // // update html
 
-    $(".scheduleDisplay").append("<tr><td>" + name1 + "</td><td>"  + place1 + "</td><td>"  + freq + "</td></tr>" )
+    $(".scheduleDisplay").append("<tr><td>" + name1 + "</td><td>"  + place1 + "</td><td>"  + freq + "</td><td>"  + nextArrival + "</td><td>" + minsAway  +" mins"+ "</td></tr>" );
 
   });
-
-
-
 
   });
 

@@ -44,4 +44,10 @@
 
   button{
      margin-left:10px;
+     background-color: #1e437d!important; 
   }
+
+  td{
+      text-align: center;
+  }
+  
