@@ -12,10 +12,12 @@
 
 #cont1{
     height: 150px;
+    font-family: 'Exo 2', sans-serif;
 }
 
  #cont2, #cont3{
         height: 100px;
+      
     }
 
     table.highlight tbody tr:hover {
@@ -35,7 +37,9 @@
 .input-field input:focus + label {
     color: #12206b !important;
   }
-  /* label underline focus color */
+
+
+/* label underline focus color */
   .row .input-field input:focus {
     border-bottom: 1px solid #12206b !important;
     box-shadow: 0 1px 0 0  #12206b !important
@@ -51,3 +55,10 @@
       text-align: center;
   }
   
+  th{
+    background-color: #233156!important;
+    color: white;
+  }
+  header{
+    font-family: 'Exo 2', sans-serif;
+  }
